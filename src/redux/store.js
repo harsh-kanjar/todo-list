@@ -1,4 +1,3 @@
-// src/redux/store.js
 import { configureStore } from '@reduxjs/toolkit';
 import fetchTodosReducer from './slices/fetchTodosSlice';
 import addTodoReducer from './slices/addTodoSlice';

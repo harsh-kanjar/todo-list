@@ -5,7 +5,7 @@ function Login(props) {
   const [credentials, setCredentials] = useState({ email: "", password: "" });
   const navigate = useNavigate();
   const handleSubmit = async (e) => {
-    e.preventDefault(); //prevent from reload
+    e.preventDefault(); 
     // Api call
     const response = await fetch(`http://localhost:5000/api/auth/login`, {
       method: "POST",

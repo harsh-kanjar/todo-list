@@ -1,0 +1,9 @@
+.custom-container {
+    min-height: calc(100vh); /* Adjust 56px to the height of your header if needed */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  footer {
+    margin-top: auto; /* Push footer to the bottom */
+  }

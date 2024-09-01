@@ -15,12 +15,26 @@ const TodoList = () => {
   const handleUpdate = (id) => {
     const updatedTodoText = prompt('Update your todo:');
     if (updatedTodoText) {
-      dispatch(updateTodo({ id, todoText: updatedTodoText }));
+      dispatch(updateTodo({ id, todoText: updatedTodoText }))
+        .unwrap()
+        .then(() => {
+          dispatch(fetchTodos()); // Re-fetch todos after updating
+        })
+        .catch((err) => {
+          console.error('Failed to update todo:', err);
+        });
     }
   };
 
   const handleDelete = (id) => {
-    dispatch(deleteTodo(id));
+    dispatch(deleteTodo(id))
+      .unwrap()
+      .then(() => {
+        dispatch(fetchTodos()); // Re-fetch todos after deleting
+      })
+      .catch((err) => {
+        console.error('Failed to delete todo:', err);
+      });
   };
 
   return (

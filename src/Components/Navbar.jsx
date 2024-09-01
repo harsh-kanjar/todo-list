@@ -55,9 +55,6 @@ function Navbar() {
             <Link className="btn btn-light mx-1" to="/signup" role="button">
               Signup
             </Link>
-            <Link className="btn btn-light mx-1" to="/payment" role="button">
-              Payment
-            </Link>
           </form>:
             <div>
               <button onClick={handleLogout} className="btn btn-light mx-2">Logout</button>
